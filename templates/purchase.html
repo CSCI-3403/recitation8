@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="columns">
+    <div class="column">
+        <a href="/" class="title is-4">&lt; Back</a>
+        <div class="card mt-5">
+            <div class="card-image">
+                <figure class="image is-256x256">
+                    <img src="/static/red_mitten.jpg" alt="Placeholder image">
+                </figure>
+            </div>
+            <div class="card-content">
+                <p class="title is-4">Purchase successful!</p>
+                <p class="subtitle is-6">Ordered {{ quantity }} mitten{{ 's' if quantity != 1 else '' }}</p>
+                <div class="is-5">Items: ${{ quantity * cost }}</div>
+                <div class="is-5">Shipping: ${{ shipping }}</div>
+                <p class="subtitle is-4">Total: ${{ quantity * cost + shipping }}</p>
+            </div>
+        </div>
+    </div>
+    <div class="column"></div>
+    <div class="column"></div>
+</div>
+{% endblock %}
